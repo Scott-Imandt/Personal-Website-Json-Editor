@@ -11,7 +11,7 @@ class ProjectOverviewJSON:
 
     def loadJSONFile(self):
 
-        path = r"JsonFiles"
+        path = r"JsonFilesOverview"
         os.chdir(path)
 
         for file in os.listdir():
@@ -23,6 +23,10 @@ class ProjectOverviewJSON:
                     self.jsonFile.append(file_contents)
 
     def saveJSONFile(self):
+
+        path = r"JsonFilesOverview"
+        os.chdir("..")
+        os.chdir(path)
 
         index = 0
         for file in os.listdir():
