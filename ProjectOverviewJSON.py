@@ -54,9 +54,6 @@ class ProjectOverviewJSON:
             case "link":
                 JSON.update({'link': content})
                 pass
-#            case "index":
-#                JSON.update({'index': content})
-#                pass
             case "id":
                 JSON.update({'id': content})
                 pass
