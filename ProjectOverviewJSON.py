@@ -12,8 +12,13 @@ class ProjectOverviewJSON:
     def loadJSONFile(self):
 
         path = r"JsonFilesOverview"
-        os.chdir(path)
+        #print('Folder', os.path.basename(os.getcwd()))
+        if(os.path.basename(os.getcwd()) == r"JsonFilesData"):
+            os.chdir("..")
 
+        if(os.path.basename(os.getcwd()) != path):
+            os.chdir(path)
+        
         for file in os.listdir():
             if (file.endswith('.json')):
 

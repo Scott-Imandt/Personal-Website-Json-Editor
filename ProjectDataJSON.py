@@ -12,10 +12,12 @@ class ProjectDataJSON:
     def loadJSONFile(self):
 
         path = r"JsonFilesData"
-
-        os.chdir("..")
-        os.chdir(path)
-
+        if(os.path.basename(os.getcwd()) == r"JsonFilesOverview"):
+            os.chdir("..")
+            
+        if(os.path.basename(os.getcwd()) != path):
+            os.chdir(path)
+        
         for file in os.listdir():
             if (file.endswith('.json')):
 
@@ -103,4 +105,6 @@ class ProjectDataJSON:
 
         with open((title+"ProjectData.json"), "w") as outfile:
             json.dump(Data, outfile)
+
+        self.loadJSONFile()
     pass
