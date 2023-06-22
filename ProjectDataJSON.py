@@ -18,6 +18,8 @@ class ProjectDataJSON:
         if(os.path.basename(os.getcwd()) != path):
             os.chdir(path)
         
+        self.jsonFile = []
+
         for file in os.listdir():
             if (file.endswith('.json')):
 
